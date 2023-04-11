@@ -9,6 +9,9 @@
   body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
+    background-image: url("https://images.unsplash.com/photo-1534283465444-a996fc1ce9ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-size: cover;
+    background-position: center;
   }
   
   header {
@@ -76,12 +79,17 @@
     border-bottom-right-radius: 10px;
   }
   
+  
+  
   .main-content {
     float: left;
     width: 50%;
+    color:white;
+    
   }
   
   .association-container {
+    
     float: right;
     width: 50%;
   }
@@ -93,12 +101,18 @@
     text-align: center;
     text-shadow: 2px 2px black;
     animation: shake 0.5s infinite;
+    background-image: url("https://images.unsplash.com/photo-1610337673044-720471f83677?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1672&q=80");
+    background-size: cover;
+    background-position: center;
   }
   
   .association-container p {
     font-size: 18px;
     line-height: 1.5;
     float:left;
+    background-image: url("https://images.unsplash.com/photo-1610337673044-720471f83677?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1672&q=80");
+    background-size: cover;
+    background-position: center;
   }
   
   @keyframes shake {
@@ -161,7 +175,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 20px;
+    margin: 10px;
+    color:white;
+    font-size:25px;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
