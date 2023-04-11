@@ -97,10 +97,11 @@
   
   .association-container h2 {
     font-size: 36px;
+    width:60%;
     font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px black;
-    animation: shake 0.5s infinite;
+    animation: shake 3s infinite;
     background-image: url("https://images.unsplash.com/photo-1610337673044-720471f83677?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1672&q=80");
     background-size: cover;
     background-position: center;
@@ -109,6 +110,12 @@
   .association-container p {
     font-size: 18px;
     line-height: 1.5;
+    background-color: black;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  height: 200px;
+  width: 200px;
     float:left;
     background-image: url("https://images.unsplash.com/photo-1610337673044-720471f83677?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1672&q=80");
     background-size: cover;
@@ -134,16 +141,7 @@
     font-weight: bold;
   }
   
-  /* Box with scrolling text */
-  .box {
-    background: linear-gradient(to right, #6a00ff, #b066fe);
-    color: #fff;
-    width: 60%;
-    height: 200px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-  }
+  
   
   .scroll-text {
     animation: scroll 60s linear infinite;
@@ -177,8 +175,8 @@
     width: 100%;
     margin: 10px;
     color:white;
-    font-size:25px;
-    background-color: #fff;
+    font-size:14px;
+    background-color: black;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
@@ -190,10 +188,10 @@
   }
   
   .portfolio-item {
-    flex-basis: calc(33.33% - 20px);
+    flex-basis: calc(33.33% - 25px);
     margin-bottom: 40px;
     text-align: center;
-    color:black;
+    color:red;
   }
   
   .portfolio-item img {
