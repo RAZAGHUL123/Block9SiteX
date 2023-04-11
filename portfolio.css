@@ -77,20 +77,15 @@
   }
   
   .main-content {
-    font-family: Georgia, serif;
-    font-weight: 400;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    line-height: 1.5;
-    text-align: justify;
+    float: left;
+    width: 50%;
   }
   
   .association-container {
-    background-color: silver;
-    padding: 40px;
-    box-shadow: 5px 5px 5px grey;
-    width:400px;
+    float: right;
+    width: 50%;
   }
+  
   
   .association-container h2 {
     font-size: 36px;
