@@ -89,6 +89,7 @@
     background-color: silver;
     padding: 40px;
     box-shadow: 5px 5px 5px grey;
+    width:400px;
   }
   
   .association-container h2 {
@@ -102,6 +103,7 @@
   .association-container p {
     font-size: 18px;
     line-height: 1.5;
+    float:left;
   }
   
   @keyframes shake {
