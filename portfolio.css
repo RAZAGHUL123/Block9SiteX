@@ -1,26 +1,29 @@
 /* Reset */
+/* This resets the margin and padding of all elements, and sets the box-sizing property to border-box to include borders and padding in the element's total width and height */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Global styles */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    background-image: url("https://images.unsplash.com/photo-1534283465444-a996fc1ce9ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  header {
-    background-color: #232f3e;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+/* This sets the font-family for the entire page to Arial or sans-serif as a fallback, and sets the background color and image */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  background-image: url("https://images.unsplash.com/photo-1534283465444-a996fc1ce9ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+/* This styles the header element with a background color, text color, padding, and center alignment */
+header {
+  background-color: #232f3e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
   nav {
     display: flex;
     justify-content: center;
@@ -41,350 +44,444 @@
   }
   
   iframe {
-    border: none;
+    border: none; /* Remove default border */
     width: 100%;
     height: 500px;
     background-color: #9147ff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  }
-  
-  iframe:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  }
-  
-  iframe::before {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #9147ff;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-  
-  iframe::after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #9147ff;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px; /* Add rounded corners to the border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a box-shadow to create a 3D effect */
   }
   
   
+  /* Add box shadow on hover to create depth effect */
+iframe:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* horizontal offset, vertical offset, blur radius, color with transparency */
+}
+
   
-  .main-content {
-    float: left;
-    width: 50%;
-    color:white;
-    
-  }
+  /* Pseudo element used to create a left border for the iframe */
+iframe::before {
+  content: ""; /* Empty content */
+  display: block; /* Display as block element */
+  width: 10px; /* Set width to 10px */
+  height: 100%; /* Set height to 100% */
+  position: absolute; /* Position the element absolutely */
+  top: 0; /* Position it at the top */
+  left: 0; /* Position it at the left */
+  background-color: #9147ff; /* Set the background color */
+  border-top-left-radius: 10px; /* Set border radius for top left corner */
+  border-bottom-left-radius: 10px; /* Set border radius for bottom left corner */
+}
+
   
-  .association-container {
-    
-    float: right;
-    width: 50%;
-  }
+  /* Create a pseudo element after the iframe */
+iframe::after {
+  /* Add content to the pseudo element */
+  content: "";
+  /* Set the display property to block */
+  display: block;
+  /* Set the width of the pseudo element */
+  width: 10px;
+  /* Set the height of the pseudo element to be 100% of the iframe height */
+  height: 100%;
+  /* Set the position of the pseudo element to be absolute */
+  position: absolute;
+  /* Set the top position of the pseudo element to be 0 */
+  top: 0;
+  /* Set the right position of the pseudo element to be 0 */
+  right: 0;
+  /* Set the background color of the pseudo element to match the iframe background color */
+  background-color: #9147ff;
+  /* Add border radius to the top-right and bottom-right corners of the pseudo element */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
   
   
-  .association-container h2 {
-    font-size: 36px;
-    width:60%;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 2px 2px black;
-    animation: shake 3s infinite;
-    background-image: url("https://images.unsplash.com/photo-1610337673044-720471f83677?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1672&q=80");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .association-container p {
-    font-size: 18px;
-    line-height: 1.5;
-    background-color: black;
+  /* This sets the main content div to be floated left, taking up 50% of the available width and with white text color */
+.main-content {
+  float: left;
+  width: 50%;
   color: white;
+  }
+
+  .association-container {
+  float: right; /* positions the container on the right */
+  width: 50%; /* sets the width to be half of the parent element */
+}
+
+.association-container h2 {
+  
+    /* Set font size to 36 pixels */
+    font-size: 36px;
+    
+    /* Set width to 60% of the container */
+    width:60%;
+    
+    /* Set font weight to bold */
+    font-weight: bold;
+    
+    /* Center text alignment */
+    text-align: center;
+    
+    /* Add a black text shadow offset by 2 pixels in both horizontal and vertical directions */
+    text-shadow: 2px 2px black;
+    
+    /* Set the shake animation to run for 3 seconds and repeat infinitely */
+    animation: shake 3s infinite;
+  background-image: url("https://images.unsplash.com/photo-1610337673044-720471f83677?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1672&q=80");
+   /* Set the background image to cover the entire element */
+   background-size: cover;
+  
+   /* Set the position of the background image to the center of the element */
+   background-position: center;
+ }
+
+  
+
+  
+ .association-container p {
+  /* Set font size and line height */
+  font-size: 18px;
+  line-height: 1.5;
+  /* Set background color and text color */
+  background-color: black;
+  color: white;
+  /* Add padding and margin */
   padding: 20px;
   margin: 10px;
+  /* Set dimensions and float the element to the left */
   height: 200px;
   width: 200px;
-    float:left;
+  float: left;
     background-image: url("https://images.unsplash.com/photo-1610337673044-720471f83677?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1672&q=80");
     background-size: cover;
     background-position: center;
   }
   
-  @keyframes shake {
-    0% { transform: translate(0, 0); }
-    10% { transform: translate(-2px, -2px); }
-    20% { transform: translate(2px, 2px); }
-    30% { transform: translate(-2px, 0); }
-    40% { transform: translate(0, 2px); }
-    50% { transform: translate(2px, -2px); }
-    60% { transform: translate(-2px, 2px); }
-    70% { transform: translate(2px, 0); }
-    80% { transform: translate(0, -2px); }
-    90% { transform: translate(-2px, -2px); }
-    100% { transform: translate(2px, 2px); }
+  /* Define a keyframe animation called shake */
+@keyframes shake {
+  /* At the start of the animation, the element is in its original position */
+  0% { transform: translate(0, 0); }
+  
+  /* At 10% of the animation, move the element up and to the left by 2px */
+  10% { transform: translate(-2px, -2px); }
+  
+  /* At 20% of the animation, move the element down and to the right by 2px */
+  20% { transform: translate(2px, 2px); }
+  
+  /* At 30% of the animation, move the element up and to the left by 2px horizontally */
+  30% { transform: translate(-2px, 0); }
+  
+  /* At 40% of the animation, move the element down by 2px vertically */
+  40% { transform: translate(0, 2px); }
+  
+  /* At 50% of the animation, move the element up and to the left by 2px */
+  50% { transform: translate(2px, -2px); }
+  
+  /* At 60% of the animation, move the element down and to the right by 2px */
+  60% { transform: translate(-2px, 2px); }
+  
+  /* At 70% of the animation, move the element to the right by 2px horizontally */
+  70% { transform: translate(2px, 0); }
+  
+  /* At 80% of the animation, move the element up by 2px vertically */
+  80% { transform: translate(0, -2px); }
+  
+  /* At 90% of the animation, move the element up and to the left by 2px */
+  90% { transform: translate(-2px, -2px); }
+  
+  /* At 100% of the animation, the element is back in its original position */
+  100% { transform: translate(2px, 2px); }
+}
+
+  
+  /* Sets the font size to 32px and makes the text bold */
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Animates the scroll text by translating it horizontally 
+   for 60 seconds with a linear timing function and repeating it infinitely */
+.scroll-text {
+  animation: scroll 60s linear infinite;
+  
+  /* Positions the scroll text at the bottom left of its container */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  /* Sets the width to 100% so the text spans the entire container */
+  width: 100%;
+}
+
+/* Specifies the properties of each span element inside the scroll text */
+.scroll-text span {
+  /* Displays each span element inline */
+  display: inline-block;
+  
+  /* Adds padding to the left and right of each span element */
+  padding: 0 10px;
+}
+
+  
+  /* Scroll animation */
+@keyframes scroll {
+  /* Starting point: the element is fully off-screen to the right */
+  0% {
+    transform: translateX(100%);
   }
   
-  h1 {
-    font-size: 32px;
-    font-weight: bold;
+  /* 100% is when the element has finished moving left and is off-screen to the left */
+  100% {
+    transform: translateX(-100%);
   }
+}
+
+  
+  //* Portfolio items */
+.portfolio-item {
+  display: flex; /* Set display to flex */
+  flex-wrap: wrap; /* Allow flex items to wrap */
+  justify-content: space-between; /* Distribute items evenly along the main axis with space between them */
+  align-items: center; /* Align items along the cross axis at the center */
+  width: 100%; /* Set width to 100% */
+  margin: 10px; /* Add margin */
+  color: white; /* Set text color to white */
+  font-size: 14px; /* Set font size to 14px */
+  background-color: black; /* Set background color to black */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  overflow: hidden; /* Hide overflow */
+}
+
+  /* Container for all portfolio items */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distributes items evenly with equal space between them */
+}
+
+/* Each individual portfolio item */
+.portfolio-item {
+  flex-basis: calc(33.33% - 25px); /* Sets the width of each item to one third of the container minus 25px */
+  margin-bottom: 40px; /* Adds space between each item */
+  text-align: center; /* Centers text content */
+  color: red; /* Sets the font color to red */
+}
+
+/* Images within each portfolio item */
+.portfolio-item img {
+  display: block; /* Makes the image a block element */
+  margin: 0 auto; /* Centers the image horizontally within the item */
+  border: 2px solid #ff0f0f; /* Adds a red border to the image */
+  box-shadow: 0px 0px 5px #ff0f0f; /* Adds a red box-shadow to the image */
+  max-width: 100%; /* Ensures the image does not overflow its container */
+  filter: drop-shadow(0px 0px 10px #ff0f0f); /* Applies a red drop shadow to the image */
+}
+
   
   
-  
-  .scroll-text {
-    animation: scroll 60s linear infinite;
-    white-space: nowrap;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  .scroll-text span {
-    display: inline-block;
-    padding: 0 10px;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  /* Portfolio items */
-  .portfolio-item {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 10px;
-    color:white;
-    font-size:14px;
-    background-color: black;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  .portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .portfolio-item {
-    flex-basis: calc(33.33% - 25px);
-    margin-bottom: 40px;
-    text-align: center;
-    color:red;
-  }
-  
-  .portfolio-item img {
-    display: block;
-    margin: 0 auto;
-    border: 2px solid #ff0f0f;
-    box-shadow: 0px 0px 5px #ff0f0f;
-    max-width: 100%;
-    filter: drop-shadow(0px 0px 10px #ff0f0f);
-  }
-  
-  
-  .portfolio-item h3 {
-    margin-top: 20px;
-    font-size: 1.5em;
-  }
-  
-  .portfolio-item p {
-    margin-top: 10px;
-    font-size: 1em;
-  }
-  
-  .portfolio-item:nth-child(odd) img {
-    border-color: #000;
-    box-shadow: 0px 0px 5px #000;
-  }
-  
+.portfolio-item h3 {
+  margin-top: 20px; /* adds margin on top of the h3 element */
+  font-size: 1.5em; /* sets the font size of h3 element to 1.5em */
+}
+
+.portfolio-item p {
+  margin-top: 10px; /* adds margin on top of the p element */
+  font-size: 1em; /* sets the font size of the p element to 1em */
+}
+
+.portfolio-item:nth-child(odd) img {
+  border-color: #000; /* sets the color of border on the img element to #000 (black) */
+  box-shadow: 0px 0px 5px #000; /* adds a box-shadow to the img element with color #000 */
+}
+
   
   /* Footer */
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #232f3e;
-    color: #fff;
-    font-size: 14px;
-    padding: 20px;
-  }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232f3e;
+  color: #fff;
+  font-size: 14px;
+  padding: 20px;
+}
+
+/* Footer links */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Hover effect for footer links */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Banner section */
+.banner {
+  position: relative;
+}
+
   
-  footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  .banner {
-    position: relative;
-  }
-  
-  .overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3rem;
-    font-weight: bold;
-    color: red;
-    text-shadow: 2px 2px #000;
-    text-align: center;
-    z-index: 1;
-  }
-  
+.overlay-text {
+  position: absolute; /* Position the element absolutely */
+  top: 50%; /* Position the element 50% from the top of the parent container */
+  left: 50%; /* Position the element 50% from the left of the parent container */
+  transform: translate(-50%, -50%); /* Center the element both vertically and horizontally using translate */
+  font-size: 3rem; /* Set the font size to 3rem (48px) */
+  font-weight: bold; /* Set the font weight to bold */
+  color: red; /* Set the text color to red */
+  text-shadow: 2px 2px #000; /* Add a text shadow with an offset of 2px in both directions */
+  text-align: center; /* Center the text horizontally */
+  z-index: 1; /* Set the z-index to 1, so the element appears on top of other elements */
+}
+
   
   /* Banner with scrolling images */
-  .banner {
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-    border: 5px solid #FF3838;
-    box-shadow: 0px 0px 20px #FF3838;
-    border-radius: 20px;
+.banner {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border: 5px solid #FF3838; /* Set border color and thickness */
+  box-shadow: 0px 0px 20px #FF3838; /* Add box shadow */
+  border-radius: 20px; /* Round the corners */
+}
+
+.banner h2 {
+  position: absolute; /* Position the heading absolutely */
+  top: 50%; /* Position it at the center of the parent element vertically */
+  left: 50%; /* Position it at the center of the parent element horizontally */
+  transform: translate(-50%, -50%); /* Center the heading */
+  color: #ff0000; /* Set heading color */
+  font-size: 72px; /* Set font size */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Set font family */
+  text-shadow: 0 0 10px #000; /* Add text shadow */
+}
+
+  
+  /* Scrolling images container */
+.scroll-images {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: scroll 30s linear infinite;
+}
+
+/* Scrolling images */
+.scroll-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow(0px 0px 10px rgba(255, 0, 255, 0.8));
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  .banner h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ff0000;
-    font-size: 72px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 0 0 10px #000;
+  100% {
+    transform: translateX(calc(-100% * 5));
   }
-  
-  
-  .scroll-images {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: scroll 30s linear infinite;
-  }
-  
-  .scroll-images img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: drop-shadow(0px 0px 10px rgba(255, 0, 255, 0.8));
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-100% * 5));
-    }
-  }
+}
+
   
   
   
+./* Styling for title container */
 .title-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #232f3e;
-    height: 60px;
-    box-shadow: 0px 0px 20px #FF3838;
-    border-radius: 10px;
-  }
-  
-  .glowing-text {
-    color: #fff;
-    font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232f3e;
+  height: 60px;
+  box-shadow: 0px 0px 20px #FF3838;
+  border-radius: 10px;
+}
+
+/* Styling for glowing text */
+.glowing-text {
+  color: #fff;
+  font-size: 32px;
+  text-shadow: 0px 0px 10px #FF3838;
+  animation: glowing 2s ease-in-out infinite;
+}
+
+/* Keyframes for glowing animation */
+@keyframes glowing {
+  0% {
     text-shadow: 0px 0px 10px #FF3838;
-    animation: glowing 2s ease-in-out infinite;
   }
-  
-  @keyframes glowing {
-    0% {
-      text-shadow: 0px 0px 10px #FF3838;
-    }
-    50% {
-      text-shadow: 0px 0px 20px #FF3838;
-    }
-    100% {
-      text-shadow: 0px 0px 10px #FF3838;
-    }
+  50% {
+    text-shadow: 0px 0px 20px #FF3838;
   }
+  100% {
+    text-shadow: 0px 0px 10px #FF3838;
+  }
+}
+
   
-  .god {
-    display: inline-block;
-    margin: 50px;
-    animation: smoke 3s linear infinite;
+.god {
+  display: inline-block; /* Display the element as an inline-block */
+  margin: 50px; /* Add margin around the element */
+  animation: smoke 3s linear infinite; /* Add the smoke animation */
 }
 
 .god img {
-    width: 200px;
-    height: auto;
-    filter: drop-shadow(0px 0px 10px gold);
-    animation: shake 2s linear infinite;
+  width: 200px; /* Set the width of the image to 200px */
+  height: auto; /* Set the height of the image to adjust automatically */
+  filter: drop-shadow(0px 0px 10px gold); /* Add a gold drop shadow effect */
+  animation: shake 2s linear infinite; /* Add the shake animation */
 }
 
 .god p {
-    font-size: 24px;
-    margin: 10px 0;
-    text-shadow: 0px 0px 10px red;
+  font-size: 24px; /* Set the font size of the paragraph to 24px */
+  margin: 10px 0; /* Add margin to the top and bottom of the paragraph */
+  text-shadow: 0px 0px 10px red; /* Add a red text shadow effect */
 }
 
+
+/* Keyframes for shaking animation */
 @keyframes shake {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-10px);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(-10px);
+  }
+  100% {
+      transform: translateX(0);
+  }
 }
 
+/* Keyframes for smoke animation */
 @keyframes smoke {
-    0% {
-        color: red;
-        text-shadow: 0px 0px 10px red;
-    }
-    50% {
-        color: #6a00ff;
-        text-shadow: none;
-    }
-    100% {
-        color: red;
-        text-shadow: 0px 0px 10px red;
-    }
+  0% {
+      color: red;
+      text-shadow: 0px 0px 10px red;
+  }
+  50% {
+      color: #6a00ff;
+      text-shadow: none;
+  }
+  100% {
+      color: red;
+      text-shadow: 0px 0px 10px red;
+  }
 }
+
+/* Styles for h1 element */
 h1 {
-    font-family: Georgia, serif;
-    font-weight: 400;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    line-height: 1.5;
-    text-align: justify;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-align: justify;
 }

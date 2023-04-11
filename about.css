@@ -55,19 +55,21 @@
   }
   .artwork-container {
     position: relative;
+    float: ;
     width: 600px;
     height: 600px;
     margin: 0 auto;
+    
   }
   
   .shape-1 {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: 50px;
     width: 400px;
     height: 400px;
     background-color: #F04F48;
-    transform: rotate(20deg);
+    transform: rotate(30deg);
     z-index: 5;
   }
   
