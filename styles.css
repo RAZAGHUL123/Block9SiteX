@@ -36,6 +36,10 @@ nav a:hover {
   background-color: #232f3e;
   color: #fff;
 }
+hr {
+  border: 40px solid black;
+  background-color: black;
+}
 /* Banner styles */
 .banner {
   position: relative;

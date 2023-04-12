@@ -215,13 +215,19 @@ iframe::after {
   100% { transform: translate(2px, 2px); }
 }
 
-  
+hr {
+  border: solid red 5px;
+  background-color: black;
+}
+
   /* Sets the font size to 32px and makes the text bold */
 h1 {
   font-size: 32px;
   font-weight: bold;
 }
+h2 {
 
+}
 /* Animates the scroll text by translating it horizontally 
    for 60 seconds with a linear timing function and repeating it infinitely */
 .scroll-text {
@@ -320,20 +326,20 @@ h1 {
   
   /* Footer */
   footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: darkblue;
-    color: white;
-    padding: 20px; /* add some padding */
-  }
-  
-  footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px; /* add some margin to create space between the child elements */
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #461919; /* update background color to dark bloody red */
+  color: white;
+  padding: 20px; /* add some padding */
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px; /* add some margin to create space between the child elements */
+}
+
 
 /* Hover effect for footer links */
 footer a:hover {
@@ -444,7 +450,45 @@ footer a:hover {
   }
 }
 
-  
+.banner-video {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border: 5px solid #FF3838;
+  box-shadow: 0px 0px 20px #FF3838;
+  border-radius: 20px;
+}
+
+.banner-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Add semi-transparent black background */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.banner-video .overlay p {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
 .god {
   display: inline-block; /* Display the element as an inline-block */
   margin: 50px; /* Add margin around the element */
