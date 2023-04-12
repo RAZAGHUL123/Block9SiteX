@@ -43,7 +43,7 @@ header {
     color: #fff;
   }
   @media screen and (max-width: 768px) {
-    .nav-links {
+    nav a {
       display: block;
       position: absolute;
       top: 80px;
