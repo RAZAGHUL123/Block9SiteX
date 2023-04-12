@@ -319,22 +319,21 @@ h1 {
 
   
   /* Footer */
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #232f3e;
-  color: #fff;
-  font-size: 14px;
-  padding: 20px;
-}
-
-/* Footer links */
-footer a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-}
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+    color: white;
+    padding: 20px; /* add some padding */
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* add some margin to create space between the child elements */
+  }
+  
 
 /* Hover effect for footer links */
 footer a:hover {
