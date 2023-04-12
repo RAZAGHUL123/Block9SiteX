@@ -41,26 +41,7 @@ hr {
   background-color: black;
 }
 /* Banner styles */
-.vacancy-sign {
-  width: 100px;
-  height: 50px;
-  background-color: #F7A7B5;
-  border: 5px solid #FF0000;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #FF0000;
-  animation: vacancy 1s infinite;
-}
 
-@keyframes vacancy {
-  0%, 49% {
-    background-color: #F7A7B5;
-    box-shadow: 0 0 10px #FF0000;
-  }
-  50%, 100% {
-    background-color: #FF0000;
-    box-shadow: 0 0 10px #F7A7B5;
-  }
-}
 
 .banner {
   position: relative;
