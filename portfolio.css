@@ -139,6 +139,7 @@ iframe::after {
   
   /* This sets the main content div to be floated left, taking up 50% of the available width and with white text color */
 .main-content {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   float: left;
   width: 50%;
   color: white;

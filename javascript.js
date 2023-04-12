@@ -1,36 +1,14 @@
-const scrollImages = document.querySelector('.scroll-images');
-const images = document.querySelectorAll('.scroll-images img');
-const maxHeight = 300;
-const scrollSpeed = 1;
+// Get the download progress element
+const progress = document.getElementById('download-progress');
 
-images.forEach(image => {
-  image.style.height = `${maxHeight}px`;
-  image.style.boxShadow = '0 0 10px rgba(128, 0, 128, 0.8)';
-  image.style.filter = 'drop-shadow(0 0 10px rgba(128, 0, 128, 0.8))';
-});
+// Set the initial progress to 0%
+let currentProgress = 0;
 
-let width = scrollImages.scrollWidth;
-scrollImages.style.transform = `translateX(-${width / 2}px)`;
-
-let scrollPosition = 0;
-let scrollInterval = setInterval(() => {
-  scrollPosition += scrollSpeed;
-  scrollImages.style.transform = `translateX(-${scrollPosition}px)`;
-  if (scrollPosition >= width) {
-    scrollPosition = 0;
+// Update the progress every second
+const intervalId = setInterval(() => {
+  currentProgress += 10;
+  if (currentProgress > 100) {
+    clearInterval(intervalId);
   }
-}, 20);
-
-scrollImages.addEventListener('mouseover', () => {
-  clearInterval(scrollInterval);
-});
-
-scrollImages.addEventListener('mouseout', () => {
-  scrollInterval = setInterval(() => {
-    scrollPosition += scrollSpeed;
-    scrollImages.style.transform = `translateX(-${scrollPosition}px)`;
-    if (scrollPosition >= width) {
-      scrollPosition = 0;
-    }
-  }, 20);
-});
+  progress.style.width = currentProgress + '%';
+}, 1000);
